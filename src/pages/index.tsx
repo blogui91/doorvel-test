@@ -130,7 +130,7 @@ export default function Characters({
           info.count === 0 ? (
             <Stack spacing={5} padding={5}  alignItems="center" justifyContent="center">
               <SearchOffIcon sx={{ fontSize: 100 }} />
-              <p>No results found for: &quot;<i>{text}</i> &quot; </p>
+              <p>No results found for: &quot;<i>{query}</i> &quot; </p>
             </Stack>
           ) : (
             <Stack spacing={5} padding={5} flexDirection="row" justifyContent="center">
