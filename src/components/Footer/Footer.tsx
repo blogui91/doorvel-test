@@ -1,22 +1,24 @@
-import { Box, Button, Container, Grid, Typography } from '@mui/material';
-import Link from 'next/link';
+import { Box, Container, Grid, Typography } from '@mui/material';
 
 const Footer = () => {
   return (
-    <Container maxWidth='lg'>
-      <Grid
-        container
-        alignItems='center'
-        direction='row'
-        justifyContent='flex-end'
-        mb={2}
-        pt={1}
-      >
-        <Typography component='h6' fontSize={16} fontWeight='semibold' ml={2}>
-          Made with ❤️ by{' '} Cesar Santana
-        </Typography>
-      </Grid>
-    </Container>
+    <Box component="footer" bgcolor="secondary">
+      <Container maxWidth='lg'>
+        <Grid
+          alignItems='center'
+          flexDirection='row'
+          display="flex"
+          justifyContent='flex-end'
+          mb={2}
+          pt={1}
+          width="100%"
+        >
+          <Typography component='h6' fontSize={16} fontWeight='semibold'>
+            Made with ❤️ by{' '} Cesar Santana
+          </Typography>
+        </Grid>
+      </Container>
+    </Box>
   );
 };
 

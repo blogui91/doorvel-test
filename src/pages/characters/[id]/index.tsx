@@ -20,6 +20,8 @@ import {
   ListItemAvatar,
   ListItemText,
   Grid,
+  useTheme,
+  useMediaQuery,
 } from "@mui/material";
 
 import TabContext from "@mui/lab/TabContext";
@@ -57,6 +59,8 @@ const Character = ({
   episodes: Episode[];
 }) => {
   const [currentTab, setTab] = useState("1");
+  const theme = useTheme();
+  const gtSm = useMediaQuery(theme.breakpoints.up("sm"));
 
   const handleChange = (event: React.SyntheticEvent, newTab: string) => {
     setTab(newTab);
@@ -96,7 +100,7 @@ const Character = ({
           </Breadcrumbs>
         </Toolbar>
 
-        <Grid sx={{ xs: { padding: 30 }}}>
+        <Grid minHeight="calc(100vh - 200px)">
           <Card sx={{ flexDirection: 'column', justifyContent: 'center', display: "flex", boxShadow: "none" }}>
             <CardMedia
               component="img"
