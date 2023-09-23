@@ -4,6 +4,7 @@ import {
   redDark,
   orangeDark,
   greenDark,
+  blue,
 } from "@radix-ui/colors";
 
 const dark = {
@@ -12,7 +13,7 @@ const dark = {
     white: mauveDark.mauve12,
   },
   primary: {
-    main: violetDark.violet9,
+    main: blue.blue1,
   },
   error: {
     main: redDark.red9,

@@ -1,14 +1,13 @@
-import { Button, Container, Grid, Stack, Typography } from "@mui/material";
+import { Button, Container, Grid, Stack, Typography, useTheme } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 
-import useAppTheme from "@/hooks/useAppTheme";
-
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
+import useToggleTheme from "@/hooks/useToggleTheme";
 
 const Header = () => {
-  const { toggleColorMode, mode }  = useAppTheme();
+  const { toggleColorMode, mode }  = useToggleTheme();
 
   return (
       <Grid
@@ -16,6 +15,11 @@ const Header = () => {
         display="flex"
         alignItems="center"
         flexDirection="row"
+        position="fixed"
+        top={0}
+        zIndex={1000}
+        color={mode == 'light' ? 'primary.contrastText' : 'secondary.contrastText'}
+        bgcolor={mode == 'light' ? 'primary.main' : 'secondary.main'}
         width="100%"
         justifyContent="space-between"
       >
@@ -35,9 +39,9 @@ const Header = () => {
 
         <Button variant="text" color="secondary" onClick={toggleColorMode}>
            { mode === 'light' ? (
-             <Brightness7Icon />
+             <Brightness7Icon sx={{ color: '#fff' }} />
              ): (
-              <Brightness4Icon />
+              <Brightness4Icon sx={{ color: '#fff'}} />
            )}
         </Button>
       </Grid>

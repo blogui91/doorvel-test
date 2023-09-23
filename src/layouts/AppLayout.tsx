@@ -1,4 +1,4 @@
-import { Paper } from "@mui/material";
+import { Box, Paper } from "@mui/material";
 
 import { Header, Footer } from "@/components";
 
@@ -16,7 +16,9 @@ const AppLayout = ({ children }: Props) => {
       }}
     >
       <Header />
-      {children}
+      <Box pt={11}>
+        {children}
+      </Box>
       <Footer />
     </Paper>
   );

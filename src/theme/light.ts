@@ -1,4 +1,4 @@
-import { green, mauve, orange, red, violet } from "@radix-ui/colors";
+import { green, mauve, orange, pink, red, blue, violet } from "@radix-ui/colors";
 
 const light = {
   common: {
@@ -6,7 +6,7 @@ const light = {
     white: mauve.mauve1,
   },
   primary: {
-    main: violet.violet9,
+    main: blue.blue9,
   },
   error: {
     main: red.red9,
