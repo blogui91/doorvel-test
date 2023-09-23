@@ -13,7 +13,7 @@ const Footer = () => {
         pt={1}
       >
         <Typography component='h6' fontSize={16} fontWeight='semibold' ml={2}>
-          Made ❤️ by{' '} Cesar Santana
+          Made with ❤️ by{' '} Cesar Santana
         </Typography>
       </Grid>
     </Container>
