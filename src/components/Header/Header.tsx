@@ -11,12 +11,11 @@ const Header = () => {
   const { toggleColorMode, mode }  = useAppTheme();
 
   return (
-    <Container>
       <Grid
+        p={3}
         display="flex"
         alignItems="center"
         flexDirection="row"
-        p={2}
         width="100%"
         justifyContent="space-between"
       >
@@ -42,7 +41,6 @@ const Header = () => {
            )}
         </Button>
       </Grid>
-    </Container>
   );
 };
 

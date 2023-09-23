@@ -49,6 +49,7 @@ export default function Characters({
   info,
   searchParams,
 }: CharactersProps) {
+  
   const router = useRouter();
   const initialRender = useRef(true);
   const [meta, setMeta] = useState(info);
@@ -112,7 +113,7 @@ export default function Characters({
       <main>
         <SearchToolbar value={text} onChange={handleOnSearch} />
 
-        <Grid container spacing={3} padding={3}>
+        <Grid container spacing={{ xs:2, sm: 1, md: 3}} padding={{ xs: 2 }}>
           {isLoading ? (
             <SkeletonCard items={11} />
           ) : (

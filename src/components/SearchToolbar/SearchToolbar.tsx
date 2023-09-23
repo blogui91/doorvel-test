@@ -1,5 +1,5 @@
 import SearchIcon from "@mui/icons-material/Search";
-import { Breadcrumbs, IconButton, Link, Stack, Toolbar, Typography } from "@mui/material";
+import { Breadcrumbs, IconButton, Link, Stack, Toolbar, useMediaQuery, useTheme } from "@mui/material";
 
 import { Search, SearchIconWrapper, StyledInputBase } from "./styles";
 import { ChangeEvent } from "react";
@@ -10,8 +10,11 @@ interface SearchToolbarProps {
 }
 
 const SearchToolbar = ({ onChange, value }: SearchToolbarProps) => {
+  const theme = useTheme();
+  const gtSm = useMediaQuery(theme.breakpoints.up("sm"));
+
   return (
-    <Toolbar sx={{ justifyContent: 'space-between' }}>
+    <Toolbar  sx={{ flexDirection: gtSm ? 'row' : 'column', justifyContent: 'space-between' }}>
       <Stack flexDirection="row" alignItems="center">
         <IconButton
           size="large"
@@ -39,7 +42,7 @@ const SearchToolbar = ({ onChange, value }: SearchToolbarProps) => {
           <SearchIcon />
         </SearchIconWrapper>
         <StyledInputBase
-          placeholder="Search…"
+          placeholder="Search a character"
           onChange={onChange}
           value={value}
           inputProps={{ "aria-label": "search" }}
